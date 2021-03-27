@@ -8,6 +8,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { QuiensoyComponent } from './componentes/quiensoy/quiensoy.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
