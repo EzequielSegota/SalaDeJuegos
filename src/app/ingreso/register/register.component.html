@@ -1,0 +1,22 @@
+<div class="row d-flex align-items-center justify-content-center">
+    <div class="col-md-6">
+        <div class="card px-5 py-5">
+            <form novalidate [formGroup]="formRegistro"  (keydown.enter)="$event.preventDefault()" class="text-center">
+                <h5 class="mt-3">Registro</h5>
+                <div class="form-input"> <i class="fa fa-envelope"></i> <input type="email" id="email" name="email" formControlName='email' class="form-control" placeholder="Email" autofocus> </div>
+
+                <div class="form-input"> <i class="fa fa-user"></i> <input type="text" id="username" name="username" formControlName='nombre' class="form-control" placeholder="Nombre de usuario"> </div>
+
+                <div class="form-input"> <i class="fa fa-lock"></i> <input type="password" id="password" name="password" class="form-control" formControlName='password' placeholder="Contraseña"> </div>
+                <div class="form-input"> <i class="fa fa-lock"></i> <input type="password" id="repeatPassword" name="repeatPassword" class="form-control" formControlName='repeatPassword' placeholder="Repetir contraseña"> </div>
+
+                <div *ngIf='error' class="form-input"> <input type="hidden" id="error" class="error form-control"><div [innerHTML]='errorTexto'></div></div>
+
+                <button type="button" class="btn btn-primary mt-4 signup" (click)='Registrar()'>Registrarse</button>
+            </form>
+            <div class="text-center mt-4"> <span>¿Tienes una cuenta?</span> <br>
+                <a routerLink="../login" class="text-decoration-none">Login</a> 
+            </div>
+        </div>
+    </div>
+</div>

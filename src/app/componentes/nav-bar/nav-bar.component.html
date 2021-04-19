@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="/" class="navbar-brand">{{ title }}</a>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="../home" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="../quien-soy" class="nav-link">Quien Soy</a>
+      </li>
+      <li *ngIf='logeado' class="nav-item">
+        <button (click)="Deslogearse()" class="btn btn-dark">Deslogearse</button>
+      </li>
+    </div>
+  </nav>
